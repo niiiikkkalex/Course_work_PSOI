@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="700.0" style="-fx-background-color: #FFFFE0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach_client1.Controllers.SummaReturnController">
+    <children>
+        <ImageView fitWidth="727.0" layoutX="-23.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/cinemaa.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="exitId1" layoutX="280.0" layoutY="377.0" mnemonicParsing="false" onMouseReleased="#EnterExit" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: red;" text="Назад">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Text layoutX="160.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сумма потерянная при возврате билетов" textAlignment="CENTER">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <Label fx:id="money" layoutX="316.0" layoutY="155.0" prefHeight="62.0" prefWidth="103.0" textAlignment="CENTER">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

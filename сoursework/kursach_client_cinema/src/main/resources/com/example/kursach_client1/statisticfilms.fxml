@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="700.0" style="-fx-background-color: #FFFFE0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach_client1.Controllers.StatisticFilmsController">
+    <children>
+        <ImageView fitWidth="727.0" layoutX="-23.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/cinemaa.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="exitId1" layoutX="284.0" layoutY="428.0" mnemonicParsing="false" onMouseReleased="#EnterExit" prefHeight="25.0" prefWidth="162.0" style="-fx-background-color: red;" text="Назад">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <AnchorPane layoutX="72.0" layoutY="11.0" prefHeight="393.0" prefWidth="547.0" style="-fx-background-color: #FFFFE0;">
+         <children>
+            <BarChart fx:id="statistic" layoutX="15.0" layoutY="22.0" legendVisible="false" prefHeight="394.0" prefWidth="526.0" style="-fx-background-color: #FFFFE0;">
+              <xAxis>
+                <CategoryAxis fx:id="xAxis">
+                     <tickLabelFont>
+                        <Font size="7.0" />
+                     </tickLabelFont>
+                  </CategoryAxis>
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" style="-fx-background-color: #FFFFE0;" />
+              </yAxis>
+            </BarChart>
+              <Text layoutX="74.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Статистика фильмов по числу покупки билетов">
+                  <font>
+                      <Font size="19.0" />
+                  </font>
+              </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="700.0" style="-fx-background-color: #FFFFE0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach_client1.Controllers.SeansesController">
+    <children>
+        <ImageView fitWidth="727.0" layoutX="-23.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/cinemaa.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="exitId1" layoutX="268.0" layoutY="373.0" mnemonicParsing="false" onMouseReleased="#EnterExit" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: red;" text="Назад">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <TabPane layoutX="68.0" layoutY="61.0" prefHeight="240.0" prefWidth="555.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Киносеансы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="16.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете дату:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="dateForView" layoutX="168.0" layoutY="1.0" onHidden="#onUpdate" />
+                          <TableView fx:id="tableId" layoutX="16.0" layoutY="32.0" prefHeight="166.0" prefWidth="528.0">
+                              <columns>
+                                  <TableColumn fx:id="nameColumn" prefWidth="357.6000213623047" text="Название фильма" />
+                                  <TableColumn fx:id="timeColumn" prefWidth="168.79998779296875" text="Время" />
+                              </columns>
+                          </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Добавить">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="50.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете дату:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="31.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете фильм:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="32.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете время:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="31.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Установите цену:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="filmAdd" layoutX="202.0" layoutY="34.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="timeAdd" layoutX="201.0" layoutY="101.0" prefHeight="26.0" prefWidth="152.0" />
+                        <TextField fx:id="price" layoutX="202.0" layoutY="136.0" prefHeight="26.0" prefWidth="152.0" />
+                        <Button fx:id="add" layoutX="386.0" layoutY="53.0" mnemonicParsing="false" onMouseReleased="#EnterAdd" prefHeight="73.0" prefWidth="130.0" style="-fx-background-color: red;" text="Добавить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <DatePicker fx:id="dataPicker" layoutX="202.0" layoutY="64.0" prefHeight="26.0" prefWidth="151.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Удалить">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="dateDelete" layoutX="284.0" layoutY="11.0" />
+                        <Text layoutX="119.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете дату:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="119.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете время:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="timeDelete" layoutX="284.0" layoutY="49.0" prefHeight="26.0" prefWidth="176.0" />
+                        <Button fx:id="deleteButton" layoutX="212.0" layoutY="106.0" mnemonicParsing="false" onMouseReleased="#EnterDelete" prefHeight="73.0" prefWidth="130.0" style="-fx-background-color: red;" text="Удалить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Редактирование">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="dateEdit" layoutX="385.0" layoutY="15.0" prefHeight="26.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="timeEdit" layoutX="385.0" layoutY="49.0" prefWidth="150.0" />
+                        <Text layoutX="34.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете дату редактируемого сеанса:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="18.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете время редактируемого сеанса:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="filmEdit" layoutX="385.0" layoutY="93.0" prefWidth="150.0" />
+                        <TextField fx:id="priceEdit" layoutX="384.0" layoutY="126.0" prefHeight="26.0" prefWidth="152.0" />
+                        <Text layoutX="27.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберете новый показываемый фильм:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="164.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Установите новую цену:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="buttonEdit" layoutX="200.0" layoutY="157.0" mnemonicParsing="false" onMouseReleased="#EnterEdit" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: red;" text="Редактировать">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
